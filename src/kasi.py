@@ -25,6 +25,7 @@ def kasi(kw_map_file, target_file):
   line_no = 0
   need_to_buffer = False
   with codecs.open(target_file, "r", "utf-8") as rh, open("%s.C" % target_file, "w") as wh:
+    # yes, single pass :-)
     for ln in rh:
       line_no += 1
       for ch in ln:
