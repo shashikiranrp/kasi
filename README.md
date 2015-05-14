@@ -7,6 +7,7 @@
 =========
 
 ```bash
+bash-4.2:src/$ # Change pwd to src folder and invoke make
 bash-4.2:src/$ make
 rm -f fact.kasi.C fact.kasi.o fact
 BEFORE TRANSFORM
