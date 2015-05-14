@@ -7,7 +7,10 @@
 =========
 
 ```bash
-bash-4.2:src/$ cat fact.kasi && echo "************************" && ./kasi.py fact.kasi && echo "************************" && cat fact.kasi.C && echo "************************"&& gcc -Wall fact.kasi.C -o fact && (echo 3 | ./fact) && echo "************************" 
+bash-4.2:src/$ make
+rm -f fact.kasi.C fact.kasi.o fact
+BEFORE TRANSFORM
+***************************
 #include <stdio.h>
 
 ಪೂರ್ಣಸಂಖ್ಯೆ main(ಪೂರ್ಣಸಂಖ್ಯೆ argc, ಅಕ್ಷರ *argv[]) {
@@ -18,8 +21,10 @@ bash-4.2:src/$ cat fact.kasi && echo "************************" && ./kasi.py fac
 	printf("Factorial of %d is %d\n", number, result);
 	ಕಳುಹಿಸು 0;
 }
-************************
-************************
+***************************
+
+AFTER TRANSFORM
+***************************
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
@@ -30,7 +35,22 @@ int main(int argc, char *argv[]) {
 	printf("Factorial of %d is %d\n", number, result);
 	return 0;
 }
-************************
+***************************
+
+COMPILE
+***************************
+gcc -c -Wall fact.kasi.C
+***************************
+
+LINK
+***************************
+gcc fact.kasi.o -o fact
+***************************
+
+echo 3 | ./fact
 Enter the number:Factorial of 3 is 6
-************************
+
+***************************
+*****BUILD SUCCESSFULL*****
+***************************
 ```
