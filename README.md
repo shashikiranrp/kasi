@@ -7,7 +7,7 @@
 =========
 
 ```bash
-itsattempt-lm:src shasrp$ cat fact.kasi && echo "************************" && ./kasi.py fact.kasi && echo "************************" && cat fact.kasi.C && echo "************************"&& gcc -Wall fact.kasi.C -o fact && (echo 3 | ./fact) && echo "************************" 
+bash-4.2:src/$ cat fact.kasi && echo "************************" && ./kasi.py fact.kasi && echo "************************" && cat fact.kasi.C && echo "************************"&& gcc -Wall fact.kasi.C -o fact && (echo 3 | ./fact) && echo "************************" 
 #include <stdio.h>
 
 ಪೂರ್ಣಸಂಖ್ಯೆ main(ಪೂರ್ಣಸಂಖ್ಯೆ argc, ಅಕ್ಷರ *argv[]) {
