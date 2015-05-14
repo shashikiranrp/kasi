@@ -7,7 +7,7 @@
 =========
 
 ```bash
-bash-4.2:src $ cat fact.kasi && ./kasi.py fact.kasi && cat fact.kasi.C && gcc -Wall fact.kasi.C -o fact && (echo 3 | ./fact) 
+itsattempt-lm:src shasrp$ cat fact.kasi && echo "************************" && ./kasi.py fact.kasi && echo "************************" && cat fact.kasi.C && echo "************************"&& gcc -Wall fact.kasi.C -o fact && (echo 3 | ./fact) && echo "************************" 
 #include <stdio.h>
 
 ಪೂರ್ಣಸಂಖ್ಯೆ main(ಪೂರ್ಣಸಂಖ್ಯೆ argc, ಅಕ್ಷರ *argv[]) {
@@ -18,6 +18,8 @@ bash-4.2:src $ cat fact.kasi && ./kasi.py fact.kasi && cat fact.kasi.C && gcc -W
 	printf("Factorial of %d is %d\n", number, result);
 	ಕಳುಹಿಸು 0;
 }
+************************
+************************
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
@@ -28,5 +30,7 @@ int main(int argc, char *argv[]) {
 	printf("Factorial of %d is %d\n", number, result);
 	return 0;
 }
+************************
 Enter the number:Factorial of 3 is 6
+************************
 ```
