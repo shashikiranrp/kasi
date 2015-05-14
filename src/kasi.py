@@ -77,6 +77,7 @@ def usage():
     -v, --verbose: enable verbose.
 ''' % (sys.argv[0], DEFAULT_MAP_FILE))
 
+# start here
 def main():
   if 2 > len(sys.argv):
     usage()
@@ -102,6 +103,7 @@ def main():
 
   kasi(kw_map_file, sys.argv[-1])
       
+# let's start
 if __name__ == '__main__':
   main()
   
